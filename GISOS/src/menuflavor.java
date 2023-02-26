@@ -1,5 +1,4 @@
 
-public class menuflavor {
 	import java.awt.EventQueue;
 
 	import javax.swing.JFrame;
@@ -121,6 +120,14 @@ public class menuflavor {
 			
 			JButton btnNewButton_2_1_1_1_1 = new JButton("Back");
 			btnNewButton_2_1_1_1_1.setBounds(5, 619, 158, 31);
+			btnNewButton_2_1_1_1_1.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					menuclone clone = new menuclone();
+					clone.show();
+					
+					dispose();
+				}
+			});
 			contentPane.add(btnNewButton_2_1_1_1_1);
 			
 			JLabel lblNewLabel = new JLabel("25 ฿ for each ball");
@@ -130,6 +137,14 @@ public class menuflavor {
 			
 			JButton btnNewButton_2_1_1_1_1_1 = new JButton("Next");
 			btnNewButton_2_1_1_1_1_1.setBounds(721, 619, 158, 31);
+			btnNewButton_2_1_1_1_1_1.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					menutotal total = new menutotal();
+					total.show();
+					
+					dispose();
+				}
+			});
 			contentPane.add(btnNewButton_2_1_1_1_1_1);
 			
 			JComboBox comboBox = new JComboBox();
@@ -198,7 +213,7 @@ public class menuflavor {
 			
 			JLabel lblNewLabel_1 = new JLabel("");
 			lblNewLabel_1.setBounds(5, 5, 874, 651);
-			lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Jokec\\Pictures\\.other\\for gelato\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
+			lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
 			contentPane.add(lblNewLabel_1);
 		}
 	}

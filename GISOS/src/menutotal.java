@@ -1,5 +1,4 @@
 
-public class menutotal {
 	import java.awt.EventQueue;
 
 	import javax.swing.JFrame;
@@ -12,6 +11,8 @@ public class menutotal {
 	import javax.swing.SwingConstants;
 	import javax.swing.JTextField;
 	import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 	public class menutotal extends JFrame {
 
@@ -68,20 +69,45 @@ public class menutotal {
 			contentPane.add(lblRedeemCodeFor);
 			
 			JButton btnBack = new JButton("Back");
+			btnBack.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					btnBack.addActionListener(new ActionListener() {
+						public void actionPerformed(ActionEvent e) {
+							menuflavor flavor = new menuflavor();
+							flavor.show();
+							
+							dispose();
+						}
+					});
+				}
+			});
 			btnBack.setBounds(56, 365, 158, 48);
 			contentPane.add(btnBack);
 			
 			JButton btnOk = new JButton("Ok");
+			btnOk.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+				}
+			});
 			btnOk.setBounds(265, 365, 158, 48);
 			contentPane.add(btnOk);
 			
 			JButton btnNewButton_1_1 = new JButton("Skip");
+			btnNewButton_1_1.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					Menulast last = new Menulast();
+					last.show();
+					
+					dispose();
+
+				}
+			});
 			btnNewButton_1_1.setBounds(488, 365, 158, 48);
 			contentPane.add(btnNewButton_1_1);
 			
 			JLabel lblNewLabel_1 = new JLabel("Summary");
 			lblNewLabel_1.setBounds(5, 5, 874, 651);
-			lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Jokec\\Pictures\\.other\\for gelato\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
+			lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
 			contentPane.add(lblNewLabel_1);
 		}
 }

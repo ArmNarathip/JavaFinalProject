@@ -9,6 +9,9 @@
 	import java.awt.Font;
 	import javax.swing.SwingConstants;
 	import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 	public class Menulast extends JFrame {
 
@@ -46,23 +49,46 @@
 			lblThatWillBe.setVerticalAlignment(SwingConstants.TOP);
 			lblThatWillBe.setHorizontalAlignment(SwingConstants.LEFT);
 			lblThatWillBe.setFont(new Font("Tahoma", Font.PLAIN, 30));
-			lblThatWillBe.setBounds(33, 83, 794, 123);
+			lblThatWillBe.setBounds(33, 83, 314, 48);
 			contentPane.add(lblThatWillBe);
 			
 			JLabel lblHandThisBill = new JLabel("Hand this bill to the Cashier");
 			lblHandThisBill.setVerticalAlignment(SwingConstants.TOP);
 			lblHandThisBill.setHorizontalAlignment(SwingConstants.LEFT);
 			lblHandThisBill.setFont(new Font("Tahoma", Font.PLAIN, 30));
-			lblHandThisBill.setBounds(33, 125, 794, 123);
+			lblHandThisBill.setBounds(33, 125, 393, 53);
 			contentPane.add(lblHandThisBill);
 			
 			JButton btnOk = new JButton("Ok");
-			btnOk.setBounds(33, 221, 158, 48);
+			btnOk.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					gelatomenu menu = new gelatomenu();
+					menu.show();					
+					dispose();
+				}
+			});
+			btnOk.setBounds(206, 204, 158, 48);
 			contentPane.add(btnOk);
+		
 			
+			JButton btnBack = new JButton("Back");
+			btnBack.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					menutotal total = new menutotal();
+					total.show();
+					dispose();
+				}
+			});	
+			btnBack.setBounds(33, 204, 148, 48);
+			contentPane.add(btnBack);
+					
 			JLabel lblNewLabel_1 = new JLabel("");
 			lblNewLabel_1.setBounds(5, 5, 874, 651);
-			lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Jokec\\Pictures\\.other\\for gelato\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
+			lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
 			contentPane.add(lblNewLabel_1);
+			
+			
+			
+			
 		}
 }
