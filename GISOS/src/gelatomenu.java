@@ -45,30 +45,26 @@ public class gelatomenu extends JFrame {
 		lblNewLabel.setBounds(191, 157, 515, 280);
 		getContentPane().add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton("Order Now!!");
-		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton OrderButton = new JButton("Order Now!!");
+		OrderButton.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		OrderButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				menuclone clone = new menuclone();
-				clone.show();
+				menucone cone = new menucone();
+				cone.show();
 				
 				dispose();
 
 			}
 		});
-		btnNewButton.setBounds(191, 517, 515, 78);
-		getContentPane().add(btnNewButton);
+		OrderButton.setBounds(191, 517, 515, 78);
+		getContentPane().add(OrderButton);
 		
-		JLabel lblNewLabel_2 = new JLabel("Gelato GISOS");
-		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		lblNewLabel_2.setBounds(10, 22, 849, 120);
-		getContentPane().add(lblNewLabel_2);
+		JLabel HeadingText = new JLabel("Gelato GISOS");
+		HeadingText.setHorizontalAlignment(SwingConstants.CENTER);
+		HeadingText.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		HeadingText.setBounds(10, 22, 849, 120);
+		getContentPane().add(HeadingText);
 		
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001.jpg"));
-		lblNewLabel_1.setBounds(0, 0, 874, 661);
-		getContentPane().add(lblNewLabel_1);
 	}
 }

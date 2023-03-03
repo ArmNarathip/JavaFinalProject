@@ -47,12 +47,12 @@ import java.awt.event.ActionEvent;
 			setContentPane(contentPane);
 			contentPane.setLayout(null);
 			
-			JLabel lblNewLabel = new JLabel("You will have {4Item} With {flavor}flavor {Nflavor} balls\r\n");
-			lblNewLabel.setVerticalAlignment(SwingConstants.TOP);
-			lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-			lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 30));
-			lblNewLabel.setBounds(56, 124, 794, 123);
-			contentPane.add(lblNewLabel);
+			JLabel HeadingText = new JLabel("You will have {4Item} With {flavor}flavor {Nflavor} balls\r\n");
+			HeadingText.setVerticalAlignment(SwingConstants.TOP);
+			HeadingText.setHorizontalAlignment(SwingConstants.LEFT);
+			HeadingText.setFont(new Font("Tahoma", Font.PLAIN, 30));
+			HeadingText.setBounds(56, 124, 794, 123);
+			contentPane.add(HeadingText);
 			
 			txtInt = new JTextField();
 			txtInt.setText("INT108");
@@ -61,12 +61,12 @@ import java.awt.event.ActionEvent;
 			contentPane.add(txtInt);
 			txtInt.setColumns(10);
 			
-			JLabel lblRedeemCodeFor = new JLabel("Redeem Code for 10% discount");
-			lblRedeemCodeFor.setVerticalAlignment(SwingConstants.TOP);
-			lblRedeemCodeFor.setHorizontalAlignment(SwingConstants.LEFT);
-			lblRedeemCodeFor.setFont(new Font("Tahoma", Font.PLAIN, 30));
-			lblRedeemCodeFor.setBounds(56, 186, 794, 123);
-			contentPane.add(lblRedeemCodeFor);
+			JLabel RedeemCode = new JLabel("Redeem Code for 10% discount");
+			RedeemCode.setVerticalAlignment(SwingConstants.TOP);
+			RedeemCode.setHorizontalAlignment(SwingConstants.LEFT);
+			RedeemCode.setFont(new Font("Tahoma", Font.PLAIN, 30));
+			RedeemCode.setBounds(56, 186, 794, 123);
+			contentPane.add(RedeemCode);
 			
 			JButton btnBack = new JButton("Back");
 			btnBack.addActionListener(new ActionListener() {
@@ -92,8 +92,8 @@ import java.awt.event.ActionEvent;
 			btnOk.setBounds(265, 365, 158, 48);
 			contentPane.add(btnOk);
 			
-			JButton btnNewButton_1_1 = new JButton("Skip");
-			btnNewButton_1_1.addActionListener(new ActionListener() {
+			JButton btnSkip = new JButton("Skip");
+			btnSkip.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					Menulast last = new Menulast();
 					last.show();
@@ -102,12 +102,12 @@ import java.awt.event.ActionEvent;
 
 				}
 			});
-			btnNewButton_1_1.setBounds(488, 365, 158, 48);
-			contentPane.add(btnNewButton_1_1);
+			btnSkip.setBounds(488, 365, 158, 48);
+			contentPane.add(btnSkip);
 			
-			JLabel lblNewLabel_1 = new JLabel("Summary");
-			lblNewLabel_1.setBounds(5, 5, 874, 651);
-			lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
-			contentPane.add(lblNewLabel_1);
+			JLabel BG = new JLabel("");
+			BG.setBounds(5, 5, 874, 651);
+			BG.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
+			contentPane.add(BG);
 		}
 }
