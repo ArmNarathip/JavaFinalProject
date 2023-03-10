@@ -29,11 +29,12 @@ public class gelatomenu extends JFrame {
 		});
 	}
 	public gelatomenu() {
+		getContentPane().setBackground(Color.PINK);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 900, 700);
 		JPanel contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		getContentPane().setForeground(new Color(51, 255, 204));
+		getContentPane().setForeground(Color.PINK);
 		getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("");
@@ -61,7 +62,7 @@ public class gelatomenu extends JFrame {
 		
 		JLabel HeadingText = new JLabel("Gelato GISOS");
 		HeadingText.setHorizontalAlignment(SwingConstants.CENTER);
-		HeadingText.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		HeadingText.setFont(new Font("Dubai Light", Font.PLAIN, 50));
 		HeadingText.setBounds(10, 22, 849, 120);
 		getContentPane().add(HeadingText);
 		
