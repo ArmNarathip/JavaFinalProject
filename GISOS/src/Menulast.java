@@ -45,21 +45,8 @@ import java.awt.Color;
 			setContentPane(contentPane);
 			contentPane.setLayout(null);
 			
-			JLabel TotalText = new JLabel("That will be {total} ฿");
-			TotalText.setVerticalAlignment(SwingConstants.TOP);
-			TotalText.setHorizontalAlignment(SwingConstants.LEFT);
-			TotalText.setFont(new Font("Tahoma", Font.PLAIN, 30));
-			TotalText.setBounds(33, 83, 314, 48);
-			contentPane.add(TotalText);
-			
-			JLabel HandThisBill = new JLabel("Hand this bill to the Cashier");
-			HandThisBill.setVerticalAlignment(SwingConstants.TOP);
-			HandThisBill.setHorizontalAlignment(SwingConstants.LEFT);
-			HandThisBill.setFont(new Font("Tahoma", Font.PLAIN, 30));
-			HandThisBill.setBounds(33, 125, 393, 53);
-			contentPane.add(HandThisBill);
-			
-			JButton btnOk = new JButton("Ok");
+			JButton btnOk = new JButton("Back to main");
+			btnOk.setFont(new Font("Comic Sans MS", Font.BOLD, 27));
 			btnOk.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					gelatomenu menu = new gelatomenu();
@@ -67,20 +54,45 @@ import java.awt.Color;
 					dispose();
 				}
 			});
-			btnOk.setBounds(206, 204, 158, 48);
-			contentPane.add(btnOk);
-		
 			
-			JButton btnBack = new JButton("Back");
-			btnBack.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					menutotal total = new menutotal();
-					total.show();
-					dispose();
-				}
-			});	
-			btnBack.setBounds(33, 204, 148, 48);
-			contentPane.add(btnBack);
+			JLabel lblEnjoyEatting = new JLabel("Enjoy eating!!");
+			lblEnjoyEatting.setVerticalAlignment(SwingConstants.TOP);
+			lblEnjoyEatting.setHorizontalAlignment(SwingConstants.LEFT);
+			lblEnjoyEatting.setFont(new Font("Comic Sans MS", Font.BOLD, 36));
+			lblEnjoyEatting.setBounds(326, 338, 252, 53);
+			contentPane.add(lblEnjoyEatting);
+			btnOk.setBounds(341, 418, 210, 48);
+			contentPane.add(btnOk);
+			
+			JPanel panel_1_1 = new JPanel();
+			panel_1_1.setBackground(new Color(255, 128, 128));
+			panel_1_1.setBounds(295, 327, 295, 81);
+			contentPane.add(panel_1_1);
+			
+			JLabel TotalText = new JLabel("GISOS Gelato ");
+			TotalText.setBackground(new Color(255, 128, 128));
+			TotalText.setVerticalAlignment(SwingConstants.TOP);
+			TotalText.setHorizontalAlignment(SwingConstants.LEFT);
+			TotalText.setFont(new Font("Comic Sans MS", Font.BOLD, 53));
+			TotalText.setBounds(259, 182, 417, 97);
+			contentPane.add(TotalText);
+			
+			JPanel panel = new JPanel();
+			panel.setBackground(new Color(255, 128, 128));
+			panel.setBounds(239, 182, 406, 81);
+			contentPane.add(panel);
+			
+			JLabel HandThisBill = new JLabel("Thank you for purchase");
+			HandThisBill.setVerticalAlignment(SwingConstants.TOP);
+			HandThisBill.setHorizontalAlignment(SwingConstants.LEFT);
+			HandThisBill.setFont(new Font("Comic Sans MS", Font.BOLD, 36));
+			HandThisBill.setBounds(241, 272, 431, 53);
+			contentPane.add(HandThisBill);
+			
+			JPanel panel_1 = new JPanel();
+			panel_1.setBackground(new Color(255, 128, 128));
+			panel_1.setBounds(209, 257, 467, 81);
+			contentPane.add(panel_1);
 					
 			JLabel BG = new JLabel("");
 			BG.setBounds(5, 5, 874, 651);

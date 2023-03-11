@@ -11,6 +11,9 @@ import java.awt.Color;
 import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextArea;
+import javax.swing.JTextPane;
+import javax.swing.JTextField;
 
 public class menucone extends JFrame {
 
@@ -49,7 +52,47 @@ public class menucone extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		HeadingText.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		
+		JTextArea txtrBahtball = new JTextArea();
+		txtrBahtball.setEditable(false);
+		txtrBahtball.setFont(new Font("Monospaced", Font.BOLD, 36));
+		txtrBahtball.setText("25.- Baht/Ball");
+		txtrBahtball.setBackground(new Color(255, 128, 128));
+		txtrBahtball.setBounds(296, 483, 313, 52);
+		contentPane.add(txtrBahtball);
+		
+		JTextArea txtrBalls_2_1_1 = new JTextArea();
+		txtrBalls_2_1_1.setEditable(false);
+		txtrBalls_2_1_1.setText("7 Balls");
+		txtrBalls_2_1_1.setFont(new Font("Monospaced", Font.BOLD, 17));
+		txtrBalls_2_1_1.setBackground(new Color(255, 128, 192));
+		txtrBalls_2_1_1.setBounds(725, 370, 76, 31);
+		contentPane.add(txtrBalls_2_1_1);
+		
+		JTextArea txtrBalls_2_1 = new JTextArea();
+		txtrBalls_2_1.setEditable(false);
+		txtrBalls_2_1.setText("4 Balls");
+		txtrBalls_2_1.setFont(new Font("Monospaced", Font.BOLD, 17));
+		txtrBalls_2_1.setBackground(new Color(255, 128, 192));
+		txtrBalls_2_1.setBounds(517, 370, 76, 31);
+		contentPane.add(txtrBalls_2_1);
+		
+		JTextArea txtrBalls_2 = new JTextArea();
+		txtrBalls_2.setEditable(false);
+		txtrBalls_2.setText("4 Balls");
+		txtrBalls_2.setFont(new Font("Monospaced", Font.BOLD, 17));
+		txtrBalls_2.setBackground(new Color(255, 128, 192));
+		txtrBalls_2.setBounds(310, 370, 76, 31);
+		contentPane.add(txtrBalls_2);
+		
+		JTextArea txtrBalls = new JTextArea();
+		txtrBalls.setEditable(false);
+		txtrBalls.setBackground(new Color(255, 128, 192));
+		txtrBalls.setFont(new Font("Monospaced", Font.BOLD, 17));
+		txtrBalls.setText("3 Balls");
+		txtrBalls.setBounds(85, 370, 76, 31);
+		contentPane.add(txtrBalls);
+		HeadingText.setFont(new Font("Eras Bold ITC", Font.PLAIN, 43));
 		HeadingText.setBounds(185, 21, 515, 78);
 		contentPane.add(HeadingText);
 		
@@ -59,7 +102,7 @@ public class menucone extends JFrame {
 		Bananaboat.setForeground(Color.LIGHT_GRAY);
 		Bananaboat.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		Bananaboat.setBackground(Color.RED);
-		Bananaboat.setBounds(595, 373, 200, 200);
+		Bananaboat.setBounds(671, 139, 190, 186);
 		contentPane.add(Bananaboat);
 		
 		JLabel Cup = new JLabel("");
@@ -68,7 +111,7 @@ public class menucone extends JFrame {
 		Cup.setForeground(Color.LIGHT_GRAY);
 		Cup.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		Cup.setBackground(Color.RED);
-		Cup.setBounds(83, 373, 200, 200);
+		Cup.setBounds(463, 139, 177, 186);
 		contentPane.add(Cup);
 		
 		JLabel Browsecone = new JLabel("");
@@ -77,7 +120,7 @@ public class menucone extends JFrame {
 		Browsecone.setForeground(Color.LIGHT_GRAY);
 		Browsecone.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		Browsecone.setBackground(Color.RED);
-		Browsecone.setBounds(83, 125, 200, 200);
+		Browsecone.setBounds(37, 139, 190, 192);
 		contentPane.add(Browsecone);
 		
 		JLabel Normalcone = new JLabel("");
@@ -86,7 +129,7 @@ public class menucone extends JFrame {
 		Normalcone.setForeground(Color.LIGHT_GRAY);
 		Normalcone.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		Normalcone.setBackground(Color.RED);
-		Normalcone.setBounds(595, 125, 200, 200);
+		Normalcone.setBounds(253, 137, 200, 194);
 		contentPane.add(Normalcone);
 		
 		JButton BtnNormalcone = new JButton("Normal Cone");
@@ -98,8 +141,8 @@ public class menucone extends JFrame {
 				dispose();
 			}
 		});
-		BtnNormalcone.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		BtnNormalcone.setBounds(93, 334, 190, 23);
+		BtnNormalcone.setFont(new Font("Berlin Sans FB", Font.PLAIN, 25));
+		BtnNormalcone.setBounds(37, 334, 190, 33);
 		contentPane.add(BtnNormalcone);
 		
 		JButton btnBrowseCone = new JButton("Browse Cone");
@@ -111,8 +154,8 @@ public class menucone extends JFrame {
 				dispose();
 			}
 		});
-		btnBrowseCone.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnBrowseCone.setBounds(605, 336, 190, 23);
+		btnBrowseCone.setFont(new Font("Berlin Sans FB", Font.PLAIN, 25));
+		btnBrowseCone.setBounds(258, 334, 190, 33);
 		contentPane.add(btnBrowseCone);
 		
 		JButton btnCup = new JButton("Cup");
@@ -124,8 +167,8 @@ public class menucone extends JFrame {
 				dispose();
 			}
 		});
-		btnCup.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnCup.setBounds(93, 582, 190, 23);
+		btnCup.setFont(new Font("Berlin Sans FB", Font.PLAIN, 25));
+		btnCup.setBounds(463, 334, 190, 33);
 		contentPane.add(btnCup);
 		
 		JButton btnBananaboat = new JButton("Banana Boat");
@@ -137,11 +180,12 @@ public class menucone extends JFrame {
 				dispose();
 			}
 		});
-		btnBananaboat.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnBananaboat.setBounds(605, 584, 190, 23);
+		btnBananaboat.setFont(new Font("Berlin Sans FB", Font.PLAIN, 25));
+		btnBananaboat.setBounds(671, 335, 190, 31);
 		contentPane.add(btnBananaboat);
 		
 		JButton btnBack = new JButton("Back");
+		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				gelatomenu menu = new gelatomenu();
@@ -150,13 +194,13 @@ public class menucone extends JFrame {
 				dispose();
 			}
 		});
-		btnBack.setBounds(10, 619, 158, 31);
+		btnBack.setBounds(10, 619, 99, 31);
 		contentPane.add(btnBack);
 		
 		JLabel BG = new JLabel("");
+		BG.setBackground(new Color(255, 128, 128));
 		BG.setBounds(5, 5, 874, 651);
 		BG.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
 		contentPane.add(BG);
 	}
-
 }

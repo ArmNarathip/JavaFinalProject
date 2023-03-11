@@ -64,8 +64,8 @@ import javax.swing.ImageIcon;
 				}
 			});
 			
-			
 			textField = new JTextField();
+			textField.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
 			textField.setBounds(341, 605, 211, 31);
 			contentPane.add(textField);
 			textField.setColumns(10);
@@ -77,8 +77,10 @@ import javax.swing.ImageIcon;
 			codediscount.setColumns(10);
 			
 			JTextArea textArea = new JTextArea();
+			textArea.setEditable(false);
+			textArea.setFont(new Font("Comic Sans MS", Font.PLAIN, 18));
 			textArea.setBackground(Color.WHITE);
-			textArea.setBounds(917, 69, 294, 583);
+			textArea.setBounds(895, 69, 316, 583);
 			contentPane.add(textArea);
 			
 			JButton oddernow = new JButton("Redeem");
@@ -89,7 +91,7 @@ import javax.swing.ImageIcon;
 					textArea.setText(textArea.getText()+Order());
 				}
 			});
-			oddernow.setFont(new Font("Tahoma", Font.PLAIN, 22));
+			oddernow.setFont(new Font("Eras Bold ITC", Font.PLAIN, 25));
 			
 			
 			JLabel PannacotPIC = new JLabel("");
@@ -104,7 +106,7 @@ import javax.swing.ImageIcon;
 			
 			JPanel panel = new JPanel();
 			panel.setBackground(Color.PINK);
-			panel.setBounds(897, 51, 332, 618);
+			panel.setBounds(879, 51, 350, 618);
 			contentPane.add(panel);
 			
 			JLabel StrawPIC = new JLabel("");
@@ -138,58 +140,60 @@ import javax.swing.ImageIcon;
 			contentPane.add(TiramisuPIC);
 			
 			//spinner model
-			SpinnerNumberModel model = new SpinnerNumberModel(0, 0, 3, 1);
-			SpinnerNumberModel model1 = new SpinnerNumberModel(0, 0, 3, 1);  
+			
 			SpinnerNumberModel model2 = new SpinnerNumberModel(0, 0, 3, 1);  
-			SpinnerNumberModel model3 = new SpinnerNumberModel(0, 0, 3, 1);  
-			SpinnerNumberModel model4 = new SpinnerNumberModel(0, 0, 3, 1);  
-			SpinnerNumberModel model5 = new SpinnerNumberModel(0, 0, 3, 1);  
-			SpinnerNumberModel model6 = new SpinnerNumberModel(0, 0, 3, 1);  
-			SpinnerNumberModel model7 = new SpinnerNumberModel(0, 0, 3, 1);  
+			SpinnerNumberModel model3 = new SpinnerNumberModel(0, 0, 3, 1);  		
+			SpinnerNumberModel model5 = new SpinnerNumberModel(0, 0, 3, 1);  		
 			SpinnerNumberModel model8 = new SpinnerNumberModel(0, 0, 3, 1);  
 			SpinnerNumberModel model9 = new SpinnerNumberModel(0, 0, 3, 1);  
 			SpinnerNumberModel model10 = new SpinnerNumberModel(0, 0, 3, 1);  
 			SpinnerNumberModel model11 = new SpinnerNumberModel(0, 0, 3, 1);  
 			SpinnerNumberModel model12 = new SpinnerNumberModel(0, 0, 3, 1);  
-			SpinnerNumberModel model13 = new SpinnerNumberModel(0, 0, 3, 1);  
-			SpinnerNumberModel model14 = new SpinnerNumberModel(0, 0, 3, 1);  
-			SpinnerNumberModel model15 = new SpinnerNumberModel(0, 0, 3, 1);
 			
 			//Count spinner	
 			JSpinner Count_Mandorla = new JSpinner(model2);
-			Count_Mandorla.setBounds(596, 301, 30, 20);
+			Count_Mandorla.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			Count_Mandorla.setBounds(584, 294, 42, 27);
 			contentPane.add(Count_Mandorla);
 			
 			JSpinner Count_Caffe = new JSpinner(model3);
-			Count_Caffe.setBounds(389, 301, 30, 20);
+			Count_Caffe.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			Count_Caffe.setBounds(377, 294, 42, 31);
 			contentPane.add(Count_Caffe);
 			
 			JSpinner Count_Chocolate = new JSpinner(model5);
-			Count_Chocolate.setBounds(811, 301, 30, 20);
+			Count_Chocolate.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			Count_Chocolate.setBounds(799, 294, 42, 27);
 			contentPane.add(Count_Chocolate);
 			
 			JSpinner Count_Tiramisu = new JSpinner(model8);
-			Count_Tiramisu.setBounds(176, 301, 30, 20);
+			Count_Tiramisu.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			Count_Tiramisu.setBounds(163, 294, 42, 31);
 			contentPane.add(Count_Tiramisu);
 			
 			JSpinner Count_Strawberry = new JSpinner(model9);
-			Count_Strawberry.setBounds(596, 521, 30, 20);
+			Count_Strawberry.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			Count_Strawberry.setBounds(584, 514, 42, 27);
 			contentPane.add(Count_Strawberry);
 			
 			JSpinner Count_Vanilla = new JSpinner(model10);
-			Count_Vanilla.setBounds(389, 521, 30, 20);
+			Count_Vanilla.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			Count_Vanilla.setBounds(377, 514, 42, 27);
 			contentPane.add(Count_Vanilla);
 			
 			JSpinner Count_PannaCotta = new JSpinner(model11);
-			Count_PannaCotta.setBounds(811, 522, 30, 20);
+			Count_PannaCotta.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			Count_PannaCotta.setBounds(799, 514, 42, 28);
 			contentPane.add(Count_PannaCotta);
 			
 			JSpinner Count_Lemon = new JSpinner(model12);
-			Count_Lemon.setBounds(176, 521, 30, 20);
+			Count_Lemon.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			Count_Lemon.setBounds(163, 514, 43, 27);
 			contentPane.add(Count_Lemon);
 			
 			//Purchase botton
 			JCheckBox CheckBox_Lemon = new JCheckBox("Purchase");
+			CheckBox_Lemon.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_Lemon.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					int qty = Integer.parseInt(Count_Lemon.getValue().toString());
@@ -201,7 +205,7 @@ import javax.swing.ImageIcon;
 								  textArea.setText(recipe()+"\n");
 							  }
 							  price += (qty*icecream);
-							  textArea.setText(textArea.getText()+"Lemon\t\t"+Count_Lemon.getValue()+"\n");
+							  textArea.setText(textArea.getText()+" Lemon\t\t"+Count_Lemon.getValue()+"\n");
 						  }else {
 							  CheckBox_Lemon.setSelected(false);
 						  }
@@ -215,6 +219,7 @@ import javax.swing.ImageIcon;
 			contentPane.add(CheckBox_Lemon);
 			
 			JCheckBox CheckBox_Vanilla = new JCheckBox("Purchase");
+			CheckBox_Vanilla.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_Vanilla.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					int qty = Integer.parseInt(Count_Vanilla.getValue().toString());
@@ -226,7 +231,7 @@ import javax.swing.ImageIcon;
 								  textArea.setText(recipe()+"\n");
 							  }
 							  price += (qty*icecream);
-							  textArea.setText(textArea.getText()+"Vanilla\t\t"+Count_Vanilla.getValue()+"\n");
+							  textArea.setText(textArea.getText()+" Vanilla\t\t"+Count_Vanilla.getValue()+"\n");
 						  }else {
 							  CheckBox_Vanilla.setSelected(false);
 						  }
@@ -240,6 +245,7 @@ import javax.swing.ImageIcon;
 			contentPane.add(CheckBox_Vanilla);
 			
 			JCheckBox CheckBox_PannaCotta = new JCheckBox("Purchase");
+			CheckBox_PannaCotta.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_PannaCotta.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					int qty = Integer.parseInt(Count_PannaCotta.getValue().toString());
@@ -251,7 +257,7 @@ import javax.swing.ImageIcon;
 								  textArea.setText(recipe()+"\n");
 							  }
 							  price += (qty*icecream);
-							  textArea.setText(textArea.getText()+"Panna Cotta\t\t"+Count_PannaCotta.getValue()+"\n");
+							  textArea.setText(textArea.getText()+" Panna Cotta\t\t"+Count_PannaCotta.getValue()+"\n");
 						  }else {
 							  CheckBox_PannaCotta.setSelected(false);
 						  }
@@ -265,6 +271,7 @@ import javax.swing.ImageIcon;
 			contentPane.add(CheckBox_PannaCotta);
 			
 			JCheckBox CheckBox_Mandorla = new JCheckBox("Purchase");
+			CheckBox_Mandorla.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_Mandorla.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					int qty = Integer.parseInt(Count_Mandorla.getValue().toString());
@@ -276,7 +283,7 @@ import javax.swing.ImageIcon;
 								  textArea.setText(recipe()+"\n");
 							  }
 							  price += (qty*icecream);
-							  textArea.setText(textArea.getText()+"Mandorla\t\t"+Count_Mandorla.getValue()+"\n");
+							  textArea.setText(textArea.getText()+" Mandorla\t\t"+Count_Mandorla.getValue()+"\n");
 						  }else {
 							  CheckBox_Mandorla.setSelected(false);
 						  }
@@ -290,6 +297,7 @@ import javax.swing.ImageIcon;
 			contentPane.add(CheckBox_Mandorla);
 			
 			JCheckBox CheckBox_Strawberry = new JCheckBox("Purchase");
+			CheckBox_Strawberry.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_Strawberry.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					int qty = Integer.parseInt(Count_Strawberry.getValue().toString());
@@ -301,7 +309,7 @@ import javax.swing.ImageIcon;
 								  textArea.setText(recipe()+"\n");
 							  }
 							  price += (qty*icecream);
-							  textArea.setText(textArea.getText()+"Strawberry\t\t"+Count_Strawberry.getValue()+"\n");
+							  textArea.setText(textArea.getText()+" Strawberry\t\t"+Count_Strawberry.getValue()+"\n");
 						  }else {
 							  CheckBox_Strawberry.setSelected(false);
 						  }
@@ -315,6 +323,7 @@ import javax.swing.ImageIcon;
 			contentPane.add(CheckBox_Strawberry);
 			
 			JCheckBox CheckBox_Caffe = new JCheckBox("Purchase");
+			CheckBox_Caffe.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_Caffe.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					int qty = Integer.parseInt(Count_Caffe.getValue().toString());
@@ -326,7 +335,7 @@ import javax.swing.ImageIcon;
 								  textArea.setText(recipe()+"\n");
 							  }
 							  price += (qty*icecream);
-							  textArea.setText(textArea.getText()+"Caffe\t\t"+Count_Caffe.getValue()+"\n");
+							  textArea.setText(textArea.getText()+" Caffe\t\t"+Count_Caffe.getValue()+"\n");
 						  }else {
 							  CheckBox_Caffe.setSelected(false);
 						  }
@@ -340,6 +349,7 @@ import javax.swing.ImageIcon;
 			contentPane.add(CheckBox_Caffe);
 			
 			JCheckBox CheckBox_Chocolate = new JCheckBox("Purchase");
+			CheckBox_Chocolate.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_Chocolate.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					int qty = Integer.parseInt(Count_Chocolate.getValue().toString());
@@ -351,7 +361,7 @@ import javax.swing.ImageIcon;
 								  textArea.setText(recipe()+"\n");
 							  }
 							  price += (qty*icecream);
-							  textArea.setText(textArea.getText()+"Chocolate\t\t"+Count_Chocolate.getValue()+"\n");
+							  textArea.setText(textArea.getText()+" Chocolate\t\t"+Count_Chocolate.getValue()+"\n");
 						  }else {
 							  CheckBox_Chocolate.setSelected(false);
 						  }
@@ -365,6 +375,7 @@ import javax.swing.ImageIcon;
 			contentPane.add(CheckBox_Chocolate);
 			
 			JCheckBox CheckBox_Tiramisu = new JCheckBox("Purchase");
+			CheckBox_Tiramisu.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_Tiramisu.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					int qty = Integer.parseInt(Count_Tiramisu.getValue().toString());
@@ -376,7 +387,7 @@ import javax.swing.ImageIcon;
 								  textArea.setText(recipe()+"\n");
 							  }
 							  price += (qty*icecream);
-							  textArea.setText(textArea.getText()+"Tiramisu\t\t"+Count_Tiramisu.getValue()+"\n");
+							  textArea.setText(textArea.getText()+" Tiramisu\t\t"+Count_Tiramisu.getValue()+"\n");
 						  }else {
 							  CheckBox_Tiramisu.setSelected(false);
 						  }
@@ -389,12 +400,12 @@ import javax.swing.ImageIcon;
 			contentPane.add(CheckBox_Tiramisu);
 			
 			
-			btnChooseFlavor.setFont(new Font("Tahoma", Font.PLAIN, 30));
+			btnChooseFlavor.setFont(new Font("Eras Bold ITC", Font.PLAIN, 43));
 			btnChooseFlavor.setBounds(261, 35, 515, 78);
 			contentPane.add(btnChooseFlavor);
 			
 			JButton btnTiramisu = new JButton("Tiramisu");
-			btnTiramisu.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			btnTiramisu.setFont(new Font("Berlin Sans FB", Font.PLAIN, 25));
 			btnTiramisu.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 				}
@@ -403,37 +414,37 @@ import javax.swing.ImageIcon;
 			contentPane.add(btnTiramisu);
 			
 			JButton btnCaffe = new JButton("Caffe");
-			btnCaffe.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			btnCaffe.setFont(new Font("Berlin Sans FB", Font.PLAIN, 25));
 			btnCaffe.setBounds(261, 246, 158, 48);
 			contentPane.add(btnCaffe);
 			
 			JButton btnPannaCotta = new JButton("Panna Cotta");
-			btnPannaCotta.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			btnPannaCotta.setFont(new Font("Berlin Sans FB", Font.PLAIN, 25));
 			btnPannaCotta.setBounds(683, 466, 158, 48);
 			contentPane.add(btnPannaCotta);
 			
 			JButton btnMandorla = new JButton("Mandorla");
-			btnMandorla.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			btnMandorla.setFont(new Font("Berlin Sans FB", Font.PLAIN, 25));
 			btnMandorla.setBounds(468, 246, 158, 48);
 			contentPane.add(btnMandorla);
 			
 			JButton btnLemon = new JButton("Lemon");
-			btnLemon.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			btnLemon.setFont(new Font("Berlin Sans FB", Font.PLAIN, 25));
 			btnLemon.setBounds(48, 466, 158, 48);
 			contentPane.add(btnLemon);
 			
 			JButton btnVanilla = new JButton("Vanilla");
-			btnVanilla.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			btnVanilla.setFont(new Font("Berlin Sans FB", Font.PLAIN, 25));
 			btnVanilla.setBounds(261, 466, 158, 48);
 			contentPane.add(btnVanilla);
 			
 			JButton btnStrawberry = new JButton("Strawberry");
-			btnStrawberry.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			btnStrawberry.setFont(new Font("Berlin Sans FB", Font.PLAIN, 25));
 			btnStrawberry.setBounds(468, 466, 158, 48);
 			contentPane.add(btnStrawberry);
 			
 			JButton btnChocolate = new JButton("Chocolate");
-			btnChocolate.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			btnChocolate.setFont(new Font("Berlin Sans FB", Font.PLAIN, 25));
 			btnChocolate.setBounds(683, 246, 158, 48);
 			contentPane.add(btnChocolate);
 			
@@ -451,13 +462,13 @@ import javax.swing.ImageIcon;
 			contentPane.add(btnBack);
 			
 			JLabel HeadingDescripsion = new JLabel("25 ฿ for each ball");
-			HeadingDescripsion.setFont(new Font("Tahoma", Font.PLAIN, 22));
+			HeadingDescripsion.setFont(new Font("Segoe UI Black", Font.PLAIN, 22));
 			HeadingDescripsion.setBounds(30, 11, 263, 31);
 			contentPane.add(HeadingDescripsion);
 			
 			JButton btnOrrderNow = new JButton("Order Now!");
-			btnOrrderNow.setFont(new Font("Tahoma", Font.PLAIN, 20));
-			btnOrrderNow.setBounds(1067, 711, 158, 31);
+			btnOrrderNow.setFont(new Font("Berlin Sans FB", Font.PLAIN, 34));
+			btnOrrderNow.setBounds(955, 680, 223, 62);
 			btnOrrderNow.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					Menulast last = new Menulast();
@@ -477,11 +488,11 @@ import javax.swing.ImageIcon;
 		contentPane.add(BG);
 		}
 		public String recipe() {
-			return	"**************GISOS****************";
+			return	"**************GISOS**************\n You choose Normal Cone.";
 		}
 		
 		public String Order() {
-			return	"Your order is in process...❤️❤️❤️";
+			return	" Your order is in process....\n";
 		}
 		
 		public boolean qtyIsZero(int qty) {
