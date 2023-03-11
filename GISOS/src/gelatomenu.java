@@ -42,7 +42,7 @@ public class gelatomenu extends JFrame {
 		lblNewLabel.setForeground(new Color(192, 192, 192));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 8));
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\image_2023-01-18_185605009.png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\image_2023-01-18_185605009.png"));
 		lblNewLabel.setBounds(137, 144, 615, 350);
 		getContentPane().add(lblNewLabel);
 		
@@ -71,7 +71,7 @@ public class gelatomenu extends JFrame {
 		HeadingText.setFont(new Font("Britannic Bold", Font.PLAIN, 60));
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
 		lblNewLabel_1.setBounds(10, 22, 864, 628);
 		getContentPane().add(lblNewLabel_1);
 		

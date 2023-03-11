@@ -96,7 +96,7 @@ import java.awt.Color;
 					
 			JLabel BG = new JLabel("");
 			BG.setBounds(5, 5, 874, 651);
-			BG.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
+			BG.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
 			contentPane.add(BG);
 			
 			

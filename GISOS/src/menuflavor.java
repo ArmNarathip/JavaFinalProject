@@ -94,13 +94,13 @@ import javax.swing.ImageIcon;
 			oddernow.setFont(new Font("Eras Bold ITC", Font.PLAIN, 25));
 			
 			
-			JLabel PannacotPIC = new JLabel("");
-			PannacotPIC.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\GelaPIC\\pannacot.png"));
+			JLabel PannacotPIC = new JLabel("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\pannacot.png");
+			PannacotPIC.setIcon(new ImageIcon());
 			PannacotPIC.setBounds(691, 354, 140, 101);
 			contentPane.add(PannacotPIC);
 			
 			JLabel ChocoPIC = new JLabel("");
-			ChocoPIC.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\GelaPIC\\chooco.png"));
+			ChocoPIC.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\chooco.png"));
 			ChocoPIC.setBounds(691, 134, 150, 101);
 			contentPane.add(ChocoPIC);
 			
@@ -110,32 +110,32 @@ import javax.swing.ImageIcon;
 			contentPane.add(panel);
 			
 			JLabel StrawPIC = new JLabel("");
-			StrawPIC.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\GelaPIC\\straw.png"));
+			StrawPIC.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\straw.png"));
 			StrawPIC.setBounds(468, 354, 152, 101);
 			contentPane.add(StrawPIC);
 			
 			JLabel VanilaPIC = new JLabel("");
-			VanilaPIC.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\GelaPIC\\vanilla.png"));
+			VanilaPIC.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\vanilla.png"));
 			VanilaPIC.setBounds(261, 354, 152, 101);
 			contentPane.add(VanilaPIC);
 			
 			JLabel LemonPIC = new JLabel("");
-			LemonPIC.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\GelaPIC\\lemon.png"));
+			LemonPIC.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\lemon.png"));
 			LemonPIC.setBounds(48, 354, 158, 101);
 			contentPane.add(LemonPIC);
 			
 			JLabel MandorlaPIC = new JLabel("");
-			MandorlaPIC.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\GelaPIC\\mandola.png"));
+			MandorlaPIC.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\mandola.png"));
 			MandorlaPIC.setBounds(483, 134, 129, 101);
 			contentPane.add(MandorlaPIC);
 			
 			JLabel CaffePIC = new JLabel("");
-			CaffePIC.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\GelaPIC\\coffee.png"));
+			CaffePIC.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\coffee.png"));
 			CaffePIC.setBounds(261, 134, 150, 101);
 			contentPane.add(CaffePIC);
 			
 			JLabel TiramisuPIC = new JLabel("");
-			TiramisuPIC.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\GelaPIC\\tiramisu.png"));
+			TiramisuPIC.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\tiramisu.png"));
 			TiramisuPIC.setBounds(54, 125, 152, 110);
 			contentPane.add(TiramisuPIC);
 			
@@ -484,7 +484,7 @@ import javax.swing.ImageIcon;
 			
 			JLabel BG = new JLabel("");
 			BG.setBounds(10, -11, 1259, 766);
-			BG.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
+			BG.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
 		contentPane.add(BG);
 		}
 		public String recipe() {

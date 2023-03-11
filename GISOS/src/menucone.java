@@ -97,7 +97,7 @@ public class menucone extends JFrame {
 		contentPane.add(HeadingText);
 		
 		JLabel Bananaboat = new JLabel("");
-		Bananaboat.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\kd9ooh (1).jpg"));
+		Bananaboat.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\kd9ooh (1).jpg"));
 		Bananaboat.setHorizontalAlignment(SwingConstants.CENTER);
 		Bananaboat.setForeground(Color.LIGHT_GRAY);
 		Bananaboat.setFont(new Font("Tahoma", Font.PLAIN, 8));
@@ -106,7 +106,7 @@ public class menucone extends JFrame {
 		contentPane.add(Bananaboat);
 		
 		JLabel Cup = new JLabel("");
-		Cup.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\1_ถ้วยไอศกรีม_4_oz.jpg"));
+		Cup.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\cup.jpg"));
 		Cup.setHorizontalAlignment(SwingConstants.CENTER);
 		Cup.setForeground(Color.LIGHT_GRAY);
 		Cup.setFont(new Font("Tahoma", Font.PLAIN, 8));
@@ -115,7 +115,7 @@ public class menucone extends JFrame {
 		contentPane.add(Cup);
 		
 		JLabel Browsecone = new JLabel("");
-		Browsecone.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\71AoVY1mHwL._SL1500_ (1).jpg"));
+		Browsecone.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\71AoVY1mHwL._SL1500_ (1).jpg"));
 		Browsecone.setHorizontalAlignment(SwingConstants.CENTER);
 		Browsecone.setForeground(Color.LIGHT_GRAY);
 		Browsecone.setFont(new Font("Tahoma", Font.PLAIN, 8));
@@ -124,7 +124,7 @@ public class menucone extends JFrame {
 		contentPane.add(Browsecone);
 		
 		JLabel Normalcone = new JLabel("");
-		Normalcone.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\Wafer-Twin-Cone (1).jpg"));
+		Normalcone.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\Wafer-Twin-Cone (1).jpg"));
 		Normalcone.setHorizontalAlignment(SwingConstants.CENTER);
 		Normalcone.setForeground(Color.LIGHT_GRAY);
 		Normalcone.setFont(new Font("Tahoma", Font.PLAIN, 8));
@@ -200,7 +200,7 @@ public class menucone extends JFrame {
 		JLabel BG = new JLabel("");
 		BG.setBackground(new Color(255, 128, 128));
 		BG.setBounds(5, 5, 874, 651);
-		BG.setIcon(new ImageIcon("C:\\Users\\naraa\\OneDrive\\เดสก์ท็อป\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
+		BG.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
 		contentPane.add(BG);
 	}
 }
