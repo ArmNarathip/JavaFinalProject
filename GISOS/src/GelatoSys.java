@@ -37,12 +37,12 @@ public class GelatoSys extends JFrame {
 	}
 	
 	public String recipe() {
-		return	"**************GISOS****************\n";
+		return	"*************GISOS****************\n";
 	}
 	
 	public String Order(String code) {
 		if(code.equalsIgnoreCase("INT-108")) {
-		return	" Your code has been redeemed.\n\n------------Thank you------------\n";
+		return	" Your code has been redeemed.\n\n----------------Thank you----------------\n";
 		}else {
 			return " Invalid code";
 		}
