@@ -10,6 +10,7 @@ import java.awt.Font;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
@@ -97,7 +98,7 @@ public class menucone extends JFrame {
 		contentPane.add(HeadingText);
 		
 		JLabel Bananaboat = new JLabel("");
-		Bananaboat.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\kd9ooh (1).jpg"));
+		Bananaboat.setIcon(new ImageIcon(menucone.class.getResource("/resource/banana.jpg")));
 		Bananaboat.setHorizontalAlignment(SwingConstants.CENTER);
 		Bananaboat.setForeground(Color.LIGHT_GRAY);
 		Bananaboat.setFont(new Font("Tahoma", Font.PLAIN, 8));
@@ -106,16 +107,16 @@ public class menucone extends JFrame {
 		contentPane.add(Bananaboat);
 		
 		JLabel Cup = new JLabel("");
-		Cup.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\cup.jpg"));
+		Cup.setIcon(new ImageIcon(menucone.class.getResource("/resource/cup.jpg")));
 		Cup.setHorizontalAlignment(SwingConstants.CENTER);
 		Cup.setForeground(Color.LIGHT_GRAY);
 		Cup.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		Cup.setBackground(Color.RED);
-		Cup.setBounds(463, 139, 177, 186);
+		Cup.setBounds(470, 139, 177, 186);
 		contentPane.add(Cup);
 		
 		JLabel Browsecone = new JLabel("");
-		Browsecone.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\71AoVY1mHwL._SL1500_ (1).jpg"));
+		Browsecone.setIcon(new ImageIcon(menucone.class.getResource("/resource/normalcone.jpg")));
 		Browsecone.setHorizontalAlignment(SwingConstants.CENTER);
 		Browsecone.setForeground(Color.LIGHT_GRAY);
 		Browsecone.setFont(new Font("Tahoma", Font.PLAIN, 8));
@@ -124,7 +125,7 @@ public class menucone extends JFrame {
 		contentPane.add(Browsecone);
 		
 		JLabel Normalcone = new JLabel("");
-		Normalcone.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\Wafer-Twin-Cone (1).jpg"));
+		Normalcone.setIcon(new ImageIcon(menucone.class.getResource("/resource/browsecone.jpg")));
 		Normalcone.setHorizontalAlignment(SwingConstants.CENTER);
 		Normalcone.setForeground(Color.LIGHT_GRAY);
 		Normalcone.setFont(new Font("Tahoma", Font.PLAIN, 8));
@@ -135,7 +136,13 @@ public class menucone extends JFrame {
 		JButton BtnNormalcone = new JButton("Normal Cone");
 		BtnNormalcone.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				menuflavor flavor = new menuflavor();
+				menuflavor flavor = null;
+				try {
+					flavor = new menuflavor();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				flavor.show();
 		
 				dispose();
@@ -148,7 +155,13 @@ public class menucone extends JFrame {
 		JButton btnBrowseCone = new JButton("Browse Cone");
 		btnBrowseCone.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				menuCupAndBrowsecone Browsecone = new menuCupAndBrowsecone();
+				menuCupAndBrowsecone Browsecone = null;
+				try {
+					Browsecone = new menuCupAndBrowsecone();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				Browsecone.show();
 		
 				dispose();
@@ -161,7 +174,13 @@ public class menucone extends JFrame {
 		JButton btnCup = new JButton("Cup");
 		btnCup.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				menuCupAndBrowsecone Cup = new menuCupAndBrowsecone();
+				menuCupAndBrowsecone Cup = null;
+				try {
+					Cup = new menuCupAndBrowsecone();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				Cup.show();
 		
 				dispose();
@@ -174,7 +193,13 @@ public class menucone extends JFrame {
 		JButton btnBananaboat = new JButton("Banana Boat");
 		btnBananaboat.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MenuBananaboat Bananaboat = new MenuBananaboat();
+				MenuBananaboat Bananaboat = null;
+				try {
+					Bananaboat = new MenuBananaboat();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				Bananaboat.show();
 		
 				dispose();
@@ -200,7 +225,7 @@ public class menucone extends JFrame {
 		JLabel BG = new JLabel("");
 		BG.setBackground(new Color(255, 128, 128));
 		BG.setBounds(5, 5, 874, 651);
-		BG.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
+		BG.setIcon(new ImageIcon(menucone.class.getResource("/resource/BG.jpg")));
 		contentPane.add(BG);
 	}
 }

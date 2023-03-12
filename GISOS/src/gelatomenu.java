@@ -37,14 +37,24 @@ public class gelatomenu extends JFrame {
 		getContentPane().setForeground(Color.PINK);
 		getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBackground(new Color(255, 0, 0));
-		lblNewLabel.setForeground(new Color(192, 192, 192));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 8));
-		lblNewLabel.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\image_2023-01-18_185605009.png"));
-		lblNewLabel.setBounds(137, 144, 615, 350);
-		getContentPane().add(lblNewLabel);
+		JButton btnClose = new JButton("Exit");
+		btnClose.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnClose.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btnClose.setBounds(24, 603, 85, 37);
+		getContentPane().add(btnClose);
+		
+		JLabel bgmain = new JLabel("");
+		bgmain.setBackground(new Color(255, 0, 0));
+		bgmain.setForeground(new Color(192, 192, 192));
+		bgmain.setHorizontalAlignment(SwingConstants.CENTER);
+		bgmain.setFont(new Font("Tahoma", Font.PLAIN, 8));
+		bgmain.setIcon(new ImageIcon(gelatomenu.class.getResource("/resource/BG main.png")));
+		bgmain.setBounds(137, 144, 615, 350);
+		getContentPane().add(bgmain);
 		
 		JButton OrderButton = new JButton("Order Now!!");
 		OrderButton.setFont(new Font("Eras Bold ITC", Font.PLAIN, 47));
@@ -70,10 +80,10 @@ public class gelatomenu extends JFrame {
 		HeadingText.setHorizontalAlignment(SwingConstants.CENTER);
 		HeadingText.setFont(new Font("Britannic Bold", Font.PLAIN, 60));
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
-		lblNewLabel_1.setBounds(10, 22, 864, 628);
-		getContentPane().add(lblNewLabel_1);
+		JLabel bg = new JLabel("");
+		bg.setIcon(new ImageIcon(gelatomenu.class.getResource("/resource/BG.jpg")));
+		bg.setBounds(10, 25, 864, 628);
+		getContentPane().add(bg);
 		
 		
 	}

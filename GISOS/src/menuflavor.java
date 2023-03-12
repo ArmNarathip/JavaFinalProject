@@ -10,7 +10,10 @@ import javax.swing.ImageIcon;
 	import javax.swing.JButton;
 	import java.awt.Font;
 	import java.awt.event.ActionListener;
-	import java.awt.event.ActionEvent;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.awt.event.ActionEvent;
 	import javax.swing.JComboBox;
 	import javax.swing.JSpinner;
 	import javax.swing.SpinnerNumberModel;
@@ -24,7 +27,6 @@ import javax.swing.ImageIcon;
 		private JPanel contentPane;
 		private JTextField codediscount;
 		private int x =0;
-		private int icecream=25;
 		private int cup=0;
 		private JTextField textField;
 		private double price=0;
@@ -48,8 +50,13 @@ import javax.swing.ImageIcon;
 		/**
 		 * Create the frame.
 		 */
-		public menuflavor() {
-
+		public menuflavor() throws IOException {
+			
+			GelatoSys Galato = new GelatoSys(3);
+			
+			try {
+				PrintStream write = new PrintStream(new FileOutputStream("Menu.txt", true));
+			
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			setBounds(100, 100, 1275, 805);
 			contentPane = new JPanel();
@@ -83,72 +90,72 @@ import javax.swing.ImageIcon;
 			textArea.setBounds(895, 69, 316, 583);
 			contentPane.add(textArea);
 			
-			JButton oddernow = new JButton("Redeem");
-			oddernow.setBounds(367, 652, 152, 41);
+			JButton oddernow = new JButton("Redeem code");
+			oddernow.setBounds(367, 652, 167, 41);
 			contentPane.add(oddernow);
 			oddernow.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					textArea.setText(textArea.getText()+Order());
+					textArea.setText(textArea.getText()+Galato.Order(textField.getText())+"\n");
+
 				}
 			});
-			oddernow.setFont(new Font("Eras Bold ITC", Font.PLAIN, 25));
-			
-			
-			JLabel PannacotPIC = new JLabel("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\pannacot.png");
-			PannacotPIC.setIcon(new ImageIcon());
-			PannacotPIC.setBounds(691, 354, 140, 101);
-			contentPane.add(PannacotPIC);
-			
-			JLabel ChocoPIC = new JLabel("");
-			ChocoPIC.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\chooco.png"));
-			ChocoPIC.setBounds(691, 134, 150, 101);
-			contentPane.add(ChocoPIC);
+			oddernow.setFont(new Font("Eras Bold ITC", Font.PLAIN, 20));
 			
 			JPanel panel = new JPanel();
 			panel.setBackground(Color.PINK);
 			panel.setBounds(879, 51, 350, 618);
 			contentPane.add(panel);
 			
+			JLabel PannacotPIC = new JLabel("");
+			PannacotPIC.setIcon(new ImageIcon(menuflavor.class.getResource("/resource/pannacotta.png")));
+			PannacotPIC.setBounds(691, 354, 140, 101);
+			contentPane.add(PannacotPIC);
+			
+			JLabel ChocoPIC = new JLabel("");
+			ChocoPIC.setIcon(new ImageIcon(menuflavor.class.getResource("/resource/chocolate.png")));
+			ChocoPIC.setBounds(691, 134, 150, 101);
+			contentPane.add(ChocoPIC);		
+			
 			JLabel StrawPIC = new JLabel("");
-			StrawPIC.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\straw.png"));
+			StrawPIC.setIcon(new ImageIcon(menuflavor.class.getResource("/resource/straw.png")));
 			StrawPIC.setBounds(468, 354, 152, 101);
 			contentPane.add(StrawPIC);
 			
 			JLabel VanilaPIC = new JLabel("");
-			VanilaPIC.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\vanilla.png"));
+			VanilaPIC.setIcon(new ImageIcon(menuflavor.class.getResource("/resource/vanilla.png")));
 			VanilaPIC.setBounds(261, 354, 152, 101);
 			contentPane.add(VanilaPIC);
 			
 			JLabel LemonPIC = new JLabel("");
-			LemonPIC.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\lemon.png"));
+			LemonPIC.setIcon(new ImageIcon(menuflavor.class.getResource("/resource/lemon.png")));
 			LemonPIC.setBounds(48, 354, 158, 101);
 			contentPane.add(LemonPIC);
 			
 			JLabel MandorlaPIC = new JLabel("");
-			MandorlaPIC.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\mandola.png"));
+			MandorlaPIC.setIcon(new ImageIcon(menuflavor.class.getResource("/resource/mandorla.png")));
 			MandorlaPIC.setBounds(483, 134, 129, 101);
 			contentPane.add(MandorlaPIC);
 			
 			JLabel CaffePIC = new JLabel("");
-			CaffePIC.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\coffee.png"));
+			CaffePIC.setIcon(new ImageIcon(menuflavor.class.getResource("/resource/coffee.png")));
 			CaffePIC.setBounds(261, 134, 150, 101);
 			contentPane.add(CaffePIC);
 			
 			JLabel TiramisuPIC = new JLabel("");
-			TiramisuPIC.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\GelaPIC\\tiramisu.png"));
+			TiramisuPIC.setIcon(new ImageIcon(menuflavor.class.getResource("/resource/tiramisu.png")));
 			TiramisuPIC.setBounds(54, 125, 152, 110);
 			contentPane.add(TiramisuPIC);
 			
 			//spinner model
 			
-			SpinnerNumberModel model2 = new SpinnerNumberModel(0, 0, 3, 1);  
-			SpinnerNumberModel model3 = new SpinnerNumberModel(0, 0, 3, 1);  		
-			SpinnerNumberModel model5 = new SpinnerNumberModel(0, 0, 3, 1);  		
-			SpinnerNumberModel model8 = new SpinnerNumberModel(0, 0, 3, 1);  
-			SpinnerNumberModel model9 = new SpinnerNumberModel(0, 0, 3, 1);  
-			SpinnerNumberModel model10 = new SpinnerNumberModel(0, 0, 3, 1);  
-			SpinnerNumberModel model11 = new SpinnerNumberModel(0, 0, 3, 1);  
-			SpinnerNumberModel model12 = new SpinnerNumberModel(0, 0, 3, 1);  
+			SpinnerNumberModel model2 = new SpinnerNumberModel(0, 0, Galato.getcup(), 1);  
+			SpinnerNumberModel model3 = new SpinnerNumberModel(0, 0, Galato.getcup(), 1);  		
+			SpinnerNumberModel model5 = new SpinnerNumberModel(0, 0, Galato.getcup(), 1);  		
+			SpinnerNumberModel model8 = new SpinnerNumberModel(0, 0, Galato.getcup(), 1);  
+			SpinnerNumberModel model9 = new SpinnerNumberModel(0, 0, Galato.getcup(), 1);  
+			SpinnerNumberModel model10 = new SpinnerNumberModel(0, 0, Galato.getcup(), 1);  
+			SpinnerNumberModel model11 = new SpinnerNumberModel(0, 0, Galato.getcup(), 1);  
+			SpinnerNumberModel model12 = new SpinnerNumberModel(0, 0, Galato.getcup(), 1);  
 			
 			//Count spinner	
 			JSpinner Count_Mandorla = new JSpinner(model2);
@@ -196,17 +203,18 @@ import javax.swing.ImageIcon;
 			CheckBox_Lemon.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_Lemon.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					int qty = Integer.parseInt(Count_Lemon.getValue().toString());
-					  if(qtyIsZero(qty)&&CheckBox_Lemon.isSelected()) {
+				  Galato.setqty(Integer.parseInt(Count_Lemon.getValue().toString()));
+					  if(Galato.qtyIsZero()&&CheckBox_Lemon.isSelected()) {
 						  x++;
-						  cup+=qty;
-						  if(mtc(cup,qty)){
+						  cup+=Galato.getqty();
+						  if(Galato.mtc3(cup)){
 							  if(x==1) {
-								  textArea.setText(recipe()+"\n");
+								  textArea.setText(Galato.recipe()+"\n");
 							  }
-							  price += (qty*icecream);
+							  price += (Galato.getqty()*Galato.geticecream());
 							  textArea.setText(textArea.getText()+" Lemon\t\t"+Count_Lemon.getValue()+"\n");
 						  }else {
+							  cup-=Galato.getqty();
 							  CheckBox_Lemon.setSelected(false);
 						  }
 					  }else {
@@ -222,17 +230,18 @@ import javax.swing.ImageIcon;
 			CheckBox_Vanilla.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_Vanilla.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					int qty = Integer.parseInt(Count_Vanilla.getValue().toString());
-					  if(qtyIsZero(qty)&&CheckBox_Vanilla.isSelected()) {
+					Galato.setqty(Integer.parseInt(Count_Vanilla.getValue().toString()));
+					  if(Galato.qtyIsZero()&&CheckBox_Vanilla.isSelected()) {
 						  x++;
-						  cup+=qty;
-						  if(mtc(cup,qty)){
+						  cup+=Galato.getqty();
+						  if(Galato.mtc3(cup)){
 							  if(x==1) {
-								  textArea.setText(recipe()+"\n");
+								  textArea.setText(Galato.recipe()+"\n");
 							  }
-							  price += (qty*icecream);
+							  price += (Galato.getqty()*Galato.geticecream());
 							  textArea.setText(textArea.getText()+" Vanilla\t\t"+Count_Vanilla.getValue()+"\n");
 						  }else {
+							  cup-=Galato.getqty();
 							  CheckBox_Vanilla.setSelected(false);
 						  }
 					  }else {
@@ -248,17 +257,18 @@ import javax.swing.ImageIcon;
 			CheckBox_PannaCotta.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_PannaCotta.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					int qty = Integer.parseInt(Count_PannaCotta.getValue().toString());
-					  if(qtyIsZero(qty)&&CheckBox_PannaCotta.isSelected()) {
+					Galato.setqty(Integer.parseInt(Count_PannaCotta.getValue().toString()));
+					  if(Galato.qtyIsZero()&&CheckBox_PannaCotta.isSelected()) {
 						  x++;
-						  cup+=qty;
-						  if(mtc(cup,qty)){
+						  cup+=Galato.getqty();
+						  if(Galato.mtc3(cup)){
 							  if(x==1) {
-								  textArea.setText(recipe()+"\n");
+								  textArea.setText(Galato.recipe()+"\n");
 							  }
-							  price += (qty*icecream);
+							  price += (Galato.getqty()*Galato.geticecream());
 							  textArea.setText(textArea.getText()+" Panna Cotta\t\t"+Count_PannaCotta.getValue()+"\n");
 						  }else {
+							  cup-=Galato.getqty();
 							  CheckBox_PannaCotta.setSelected(false);
 						  }
 					  }else {
@@ -274,17 +284,18 @@ import javax.swing.ImageIcon;
 			CheckBox_Mandorla.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_Mandorla.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					int qty = Integer.parseInt(Count_Mandorla.getValue().toString());
-					  if(qtyIsZero(qty)&&CheckBox_Mandorla.isSelected()) {
+					Galato.setqty(Integer.parseInt(Count_Mandorla.getValue().toString()));
+					  if(Galato.qtyIsZero()&&CheckBox_Mandorla.isSelected()) {
 						  x++;
-						  cup+=qty;
-						  if(mtc(cup,qty)){
+						  cup+=Galato.getqty();
+						  if(Galato.mtc3(cup)){
 							  if(x==1) {
-								  textArea.setText(recipe()+"\n");
+								  textArea.setText(Galato.recipe()+"\n");
 							  }
-							  price += (qty*icecream);
+							  price += (Galato.getqty()*Galato.geticecream());
 							  textArea.setText(textArea.getText()+" Mandorla\t\t"+Count_Mandorla.getValue()+"\n");
 						  }else {
+							  cup-=Galato.getqty();
 							  CheckBox_Mandorla.setSelected(false);
 						  }
 					  }else {
@@ -300,17 +311,18 @@ import javax.swing.ImageIcon;
 			CheckBox_Strawberry.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_Strawberry.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					int qty = Integer.parseInt(Count_Strawberry.getValue().toString());
-					  if(qtyIsZero(qty)&&CheckBox_Strawberry.isSelected()) {
+					Galato.setqty(Integer.parseInt(Count_Strawberry.getValue().toString()));
+					  if(Galato.qtyIsZero()&&CheckBox_Strawberry.isSelected()) {
 						  x++;
-						  cup+=qty;
-						  if(mtc(cup,qty)){
+						  cup+=Galato.getqty();
+						  if(Galato.mtc3(cup)){
 							  if(x==1) {
-								  textArea.setText(recipe()+"\n");
+								  textArea.setText(Galato.recipe()+"\n");
 							  }
-							  price += (qty*icecream);
+							  price += (Galato.getqty()*Galato.geticecream());
 							  textArea.setText(textArea.getText()+" Strawberry\t\t"+Count_Strawberry.getValue()+"\n");
 						  }else {
+							  cup-=Galato.getqty();
 							  CheckBox_Strawberry.setSelected(false);
 						  }
 					  }else {
@@ -326,17 +338,18 @@ import javax.swing.ImageIcon;
 			CheckBox_Caffe.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_Caffe.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					int qty = Integer.parseInt(Count_Caffe.getValue().toString());
-					  if(qtyIsZero(qty)&&CheckBox_Caffe.isSelected()) {
+					Galato.setqty(Integer.parseInt(Count_Caffe.getValue().toString()));
+					  if(Galato.qtyIsZero()&&CheckBox_Caffe.isSelected()) {
 						  x++;
-						  cup+=qty;
-						  if(mtc(cup,qty)){
+						  cup+=Galato.getqty();
+						  if(Galato.mtc3(cup)){
 							  if(x==1) {
-								  textArea.setText(recipe()+"\n");
+								  textArea.setText(Galato.recipe()+"\n");
 							  }
-							  price += (qty*icecream);
+							  price += (Galato.getqty()*Galato.geticecream());
 							  textArea.setText(textArea.getText()+" Caffe\t\t"+Count_Caffe.getValue()+"\n");
 						  }else {
+							  cup-=Galato.getqty();
 							  CheckBox_Caffe.setSelected(false);
 						  }
 					  }else {
@@ -352,17 +365,18 @@ import javax.swing.ImageIcon;
 			CheckBox_Chocolate.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_Chocolate.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					int qty = Integer.parseInt(Count_Chocolate.getValue().toString());
-					  if(qtyIsZero(qty)&&CheckBox_Chocolate.isSelected()) {
+					Galato.setqty(Integer.parseInt(Count_Chocolate.getValue().toString()));
+					  if(Galato.qtyIsZero()&&CheckBox_Chocolate.isSelected()) {
 						  x++;
-						  cup+=qty;
-						  if(mtc(cup,qty)){
+						  cup+=Galato.getqty();
+						  if(Galato.mtc3(cup)){
 							  if(x==1) {
-								  textArea.setText(recipe()+"\n");
+								  textArea.setText(Galato.recipe()+"\n");
 							  }
-							  price += (qty*icecream);
+							  price += (Galato.getqty()*Galato.geticecream());
 							  textArea.setText(textArea.getText()+" Chocolate\t\t"+Count_Chocolate.getValue()+"\n");
 						  }else {
+							  cup-=Galato.getqty();
 							  CheckBox_Chocolate.setSelected(false);
 						  }
 					  }else {
@@ -378,17 +392,18 @@ import javax.swing.ImageIcon;
 			CheckBox_Tiramisu.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 			CheckBox_Tiramisu.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					int qty = Integer.parseInt(Count_Tiramisu.getValue().toString());
-					  if(qtyIsZero(qty)&&CheckBox_Tiramisu.isSelected()) {
+					Galato.setqty(Integer.parseInt(Count_Tiramisu.getValue().toString()));
+					  if(Galato.qtyIsZero()&&CheckBox_Tiramisu.isSelected()) {
 						  x++;
-						  cup+=qty;
-						  if(mtc(cup,qty)){
+						  cup+=Galato.getqty();
+						  if(Galato.mtc3(cup)){
 							  if(x==1) {
-								  textArea.setText(recipe()+"\n");
+								  textArea.setText(Galato.recipe()+"\n");
 							  }
-							  price += (qty*icecream);
+							  price += (Galato.getqty()*Galato.geticecream());
 							  textArea.setText(textArea.getText()+" Tiramisu\t\t"+Count_Tiramisu.getValue()+"\n");
 						  }else {
+							  cup-=Galato.getqty();
 							  CheckBox_Tiramisu.setSelected(false);
 						  }
 					  }else {
@@ -468,13 +483,15 @@ import javax.swing.ImageIcon;
 			
 			JButton btnOrrderNow = new JButton("Order Now!");
 			btnOrrderNow.setFont(new Font("Berlin Sans FB", Font.PLAIN, 34));
-			btnOrrderNow.setBounds(955, 680, 223, 62);
+			btnOrrderNow.setBounds(942, 691, 223, 62);
 			btnOrrderNow.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					Menulast last = new Menulast();
-					int option =JOptionPane.showConfirmDialog(null, "Your Discount is "+Discount(textField.getText(),price)+" baht.",
+					int option =JOptionPane.showConfirmDialog(null, "Your price is "+ Galato.Discount(textField.getText(),price)+" baht.",
 							"Totol discount",JOptionPane.YES_NO_OPTION);
 					if(option ==JOptionPane.YES_OPTION ) {
+						write.println(textArea.getText());
+						write.close();
 						last.show();
 						dispose();
 					}
@@ -484,40 +501,14 @@ import javax.swing.ImageIcon;
 			
 			JLabel BG = new JLabel("");
 			BG.setBounds(10, -11, 1259, 766);
-			BG.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
+			BG.setIcon(new ImageIcon(menuflavor.class.getResource("/resource/BG.jpg")));
 		contentPane.add(BG);
-		}
-		public String recipe() {
-			return	"**************GISOS**************\n You choose Normal Cone.";
-		}
 		
-		public String Order() {
-			return	" Your order is in process....\n";
+		}catch(IOException e) {
+			System.out.print("\nSorry,file not found...");
 		}
-		
-		public boolean qtyIsZero(int qty) {
-			if(qty==0) {
-				JOptionPane.showMessageDialog(null, "Please increase the item quantity");
-				return false;
 			}
-			return true;
-		}
-		
-		public boolean mtc(int incup,int qty) {
-			if(incup>3) {
-				JOptionPane.showMessageDialog(null, "You can't choose more than 3 ice cream ");
-				cup-=qty;
-				return false;
-			}
-			return true;
-		}
-		
-		public double Discount(String code,double price) {
-			if(code.equalsIgnoreCase("INT-108")) {
-				return price-(price*10/100);
-			}
-			return price;
-		}
 	}
+	
 
 

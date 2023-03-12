@@ -55,6 +55,21 @@ import java.awt.Color;
 				}
 			});
 			
+			JButton btnClose = new JButton("Exit");
+			btnClose.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					System.exit(0);
+				}
+			});
+			btnClose.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			btnClose.setBounds(25, 604, 85, 37);
+			contentPane.add(btnClose);
+			
+			JLabel hehecat = new JLabel("New label");
+			hehecat.setIcon(new ImageIcon(Menulast.class.getResource("/resource/9786-hehecat.jpg")));
+			hehecat.setBounds(417, 121, 43, 81);
+			contentPane.add(hehecat);
+			
 			JLabel lblEnjoyEatting = new JLabel("Enjoy eating!!");
 			lblEnjoyEatting.setVerticalAlignment(SwingConstants.TOP);
 			lblEnjoyEatting.setHorizontalAlignment(SwingConstants.LEFT);
@@ -96,7 +111,7 @@ import java.awt.Color;
 					
 			JLabel BG = new JLabel("");
 			BG.setBounds(5, 5, 874, 651);
-			BG.setIcon(new ImageIcon("C:\\drive-download-20230220T083051Z-001\\cartoon-ice-cream-seamless-background_6997-1664.jpg"));
+			BG.setIcon(new ImageIcon(Menulast.class.getResource("/resource/BG.jpg")));
 			contentPane.add(BG);
 			
 			
