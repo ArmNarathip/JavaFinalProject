@@ -434,7 +434,7 @@ import java.awt.event.ActionEvent;
 			contentPane.add(btnCaffe);
 			
 			JButton btnPannaCotta = new JButton("Panna Cotta");
-			btnPannaCotta.setFont(new Font("Berlin Sans FB", Font.PLAIN, 25));
+			btnPannaCotta.setFont(new Font("Berlin Sans FB", Font.PLAIN, 20));
 			btnPannaCotta.setBounds(683, 466, 158, 48);
 			contentPane.add(btnPannaCotta);
 			
